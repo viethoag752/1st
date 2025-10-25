@@ -1,0 +1,65 @@
+@import url('./basic.css');
+/* PC */
+@media (min-width: 768px) {
+    .l-0,
+    .l-2,
+    .l-3,
+    .l-4,
+    .l-6,
+    .l-12{
+        display: block;
+    }
+    .l-0{
+        display:none;
+    }
+    .l-2{
+            flex: 0 0 16.6667%;
+            max-width: 16.6667%;
+    }
+    .l-3{
+        flex: 0 0 25%;
+            max-width: 25%;
+    }
+    .l-4{
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+    .l-12{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .l-6{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .grid{
+        max-width: 1200px;
+    }
+    .row{
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+    .col{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    
+    header{
+        padding: 20px 0;
+    }
+    .nav-container {
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+    }
+    #bars{
+        display: none;
+    }
+}
+@media (min-width: 768px ) and (max-width: 1200px) {
+    .grid{
+        max-width: 644px;
+    }
+}

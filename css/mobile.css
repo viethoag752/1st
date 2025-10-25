@@ -1,0 +1,51 @@
+@import url('./basic.css');
+/* Grid System */
+@media (max-width: 767px) {
+    .c-0{
+        display:none;
+    }
+    .c-1{
+        flex: 0 0 8.3333%;
+        max-width: 8.3333%;
+    }
+    .c-2{
+        flex: 0 0 16.6667%;
+        max-width: 16.6667%;
+    }
+    .c-3{
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .c-6{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .c-12{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .row{
+        margin-left: -4px;
+        margin-right: -4px;
+    }
+    .col{
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    /* Header */
+    .logo{
+        
+    }
+    .nav-container nav {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 25px 0 0;
+    }
+    .internal-link{
+        display: none;
+    }
+    #bars{
+        width: 1em;
+        height: 1em;
+    }
+}
