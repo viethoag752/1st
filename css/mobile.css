@@ -4,18 +4,6 @@
     .c-0{
         display:none;
     }
-    .c-1{
-        flex: 0 0 8.3333%;
-        max-width: 8.3333%;
-    }
-    .c-2{
-        flex: 0 0 16.6667%;
-        max-width: 16.6667%;
-    }
-    .c-3{
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
     .c-6{
         flex: 0 0 50%;
         max-width: 50%;
@@ -23,24 +11,6 @@
     .c-12{
         flex: 0 0 100%;
         max-width: 100%;
-    }
-    .c-o-0{
-        display:none;
-    }
-    .c-o-1{
-        margin-left: 8.3333%;
-    }
-    .c-o-2{
-        margin-left: 16.6667%;
-    }
-    .c-o-3{
-        margin-left: 25%;
-    }
-    .c-o-6{
-        margin-left: 50%;
-    }
-    .c-o-12{
-        margin-left: 100%;
     }
     .row{
         margin-left: -4px;
@@ -51,7 +21,6 @@
         padding-right: 4px;
     }
     /* Header */
-
     .nav-container nav {
         display: flex;
         justify-content: flex-end;
@@ -97,4 +66,78 @@
 
         
     }
+/* Main */
+    /* Description */
+    .short-description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap:30px;
+        h1{
+            text-align: center;
+        }
+    }
+    .description{
+        padding: 10px ;
+        text-align: center;
+    }
+    .view-project-button{
+        padding: 10px 10px;
+        background-color: var(--sub-color);
+        border-radius: 5px;
+    }
+    /* Project */
+     .project-title{
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .project-container{
+        gap: 40px;
+        padding: 0 30px;
+    }
+    .pj-card{
+        background-color: #fff;
+        color: var(--sub-font-color);
+        border-radius: 10px;
+        padding: 20px;
+        
+    }
+    .pj-card:hover{
+        color: var(--sub-font-color);
+        text-shadow: 
+            .1px .1px rgba(0,0,0,0.5), 
+            .2px .2px rgba(0,0,0,0.5), 
+            .3px .3px rgba(0,0,0,0.5), 
+            .4px .4px rgba(0,0,0,0.5);
+    }
+    .pj-name{
+        align-items: center;
+        gap: 20px;
+    }
+    .pj-name h2{
+        width: 50%;
+    }
+    /* Contact */
+    .contact-title{
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .contact-container{
+        padding: 30px;
+    }
+    .contact-container form{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+        background-color: var(--main-color);
+        border-radius: 7px;
+        color: var(--sub-font-color);
+    }
+    .contact-container form input{
+        border: none;
+    }
+
 }

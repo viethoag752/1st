@@ -28,20 +28,12 @@
         flex: 0 0 50%;
         max-width: 50%;
     }
+    .l-12{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 
-    .l-o-2{
-        margin-left: 16.6667%;
-    }
-    .l-o-3{
-        margin-left: 25%;
-    }
-    .l-o-4{
-        margin-left: 33.3333%;
-    }
     
-    .l-o-6{
-        margin-left: 50%;
-    }
     .grid{
         max-width: 1200px;
     }
@@ -53,7 +45,7 @@
         padding-left: 12px;
         padding-right: 12px;
     }
-    
+    /* Header */
     header{
         padding: 20px 0;
     }
@@ -67,6 +59,80 @@
     }
     .nav-mobile{
         display: none;
+    }
+
+    /* Main */
+    .short-description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        h1{
+            text-align: center;
+        }
+
+    }
+    .view-project-button{
+        padding: 10px 10px;
+        background-color: var(--sub-color);
+        border-radius: 5px;
+    }
+    .project{
+        align-content: center;
+    }
+    .project-title{
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+     .project-container{
+        gap: 20px;
+    }
+    .pj-card{
+        max-width: 380px;
+        background-color: #fff;
+        color: var(--sub-font-color);
+        border-radius: 10px;     
+        padding: 10px;
+    }
+    .pj-card:hover{
+        color: var(--sub-font-color);
+        text-shadow: 
+            .1px .1px rgba(0,0,0,0.5), 
+            .2px .2px rgba(0,0,0,0.5), 
+            .3px .3px rgba(0,0,0,0.5), 
+            .4px .4px rgba(0,0,0,0.5);
+    }
+    .pj-name{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+     .pj-name h2{
+        width: 50%;
+    }
+    /* Contact */
+     .contact-title{
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .contact-container{
+        justify-content: center;
+        justify-items: center;
+        padding: 30px;
+    }
+    .contact-container form{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+        background-color: var(--main-color);
+        border-radius: 7px;
+        color: var(--sub-font-color);
+    }
+    .contact-container form input{
+        border: none;
     }
 }
 @media (min-width: 768px ) and (max-width: 1200px) {

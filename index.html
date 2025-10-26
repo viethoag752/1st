@@ -1,84 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="css/pc.css">
-    
-</head>
-<body  >
-    <header >
-       <div class=" grid container ">
-            <div class=" header-content row ">
-                <div class="logo col c-6 l-6">
-                    <a href="#">This is logo</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="css/pc.css" />
+  </head>
+  <body>
+    <header>
+      <div class="grid container">
+        <div class="header-content row">
+          <div class="logo col c-6 l-6">
+            <a href="#">This is logo</a>
+          </div>
+          <div class="nav-container col c-6 l-6">
+            <nav>
+              <div class="nav-desktop">
+                <a class="internal-link active" href="#home">Home</a>
+                <a class="internal-link" href="#project">Project</a>
+                <a class="internal-link" href="#contact">Contact</a>
+              </div>
+              <div id="bars" onclick="navToggleHandler()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                  <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                  <path
+                    d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+                  />
+                </svg>
+              </div>
+              <div
+                id="nav-overlay"
+                class="overlay"
+                onclick="navToggleHandler()"
+              ></div>
+              <div class="nav-mobile">
+                <div class="close-button" onclick="navToggleHandler()">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path
+                      d="M320 112C434.9 112 528 205.1 528 320C528 434.9 434.9 528 320 528C205.1 528 112 434.9 112 320C112 205.1 205.1 112 320 112zM320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM231 231C221.6 240.4 221.6 255.6 231 264.9L286 319.9L231 374.9C221.6 384.3 221.6 399.5 231 408.8C240.4 418.1 255.6 418.2 264.9 408.8L319.9 353.8L374.9 408.8C384.3 418.2 399.5 418.2 408.8 408.8C418.1 399.4 418.2 384.2 408.8 374.9L353.8 319.9L408.8 264.9C418.2 255.5 418.2 240.3 408.8 231C399.4 221.7 384.2 221.6 374.9 231L319.9 286L264.9 231C255.5 221.6 240.3 221.6 231 231z"
+                    />
+                  </svg>
                 </div>
-                <div class="nav-container col c-6 l-6 ">
-                    <nav>
-                        <div class="nav-desktop">
-                            <a  class="internal-link active" href="#home">Home</a>
-                            <a  class="internal-link" href="#project">Project</a>
-                            <a  class="internal-link" href="#contact">Contact</a>
-                        </div >
-                        <div id="bars"  onclick="navToggleHandler()">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg>
-                        </div>
-                         <div id="nav-overlay" class="overlay" onclick="navToggleHandler()"></div>
-                        <div class="nav-mobile">
-                            <div class="close-button" onclick="navToggleHandler()">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M320 112C434.9 112 528 205.1 528 320C528 434.9 434.9 528 320 528C205.1 528 112 434.9 112 320C112 205.1 205.1 112 320 112zM320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM231 231C221.6 240.4 221.6 255.6 231 264.9L286 319.9L231 374.9C221.6 384.3 221.6 399.5 231 408.8C240.4 418.1 255.6 418.2 264.9 408.8L319.9 353.8L374.9 408.8C384.3 418.2 399.5 418.2 408.8 408.8C418.1 399.4 418.2 384.2 408.8 374.9L353.8 319.9L408.8 264.9C418.2 255.5 418.2 240.3 408.8 231C399.4 221.7 384.2 221.6 374.9 231L319.9 286L264.9 231C255.5 221.6 240.3 221.6 231 231z"/></svg>
-                            </div>
-                            <div class = "nav-mobile-links">
-                                <span>
-                                    <svg style="width: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336L112 336L112 512C112 547.3 140.7 576 176 576L464 576C499.3 576 528 547.3 528 512L528 336L544 336C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384L336 384C362.5 384 384 405.5 384 432L384 528L256 528L256 432C256 405.5 277.5 384 304 384z"/></svg>
-                                    <a  class="internal-link-mobile" href="#home">Home</a>
-                                </span>
-                                <span>
-                                    <svg style="width: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z"/></svg>
-                                    <a  class="internal-link-mobile" href="#project">Project</a>
-                                </span> 
-                                 <span>
-                                    <svg style="width: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M64 416L64 192C64 139 107 96 160 96L480 96C533 96 576 139 576 192L576 416C576 469 533 512 480 512L360 512C354.8 512 349.8 513.7 345.6 516.8L230.4 603.2C226.2 606.3 221.2 608 216 608C202.7 608 192 597.3 192 584L192 512L160 512C107 512 64 469 64 416z"/></svg>
-                                    <a  class="internal-link-mobile" href="#contact">Contact</a>
-                                </span>
-                            </div>
-                        </div>
-                    </nav>
-                    
-                </div >
-            </div>
-       </div>
+                <div class="nav-mobile-links">
+                  <span>
+                    <svg
+                      style="width: 1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 640 640"
+                    >
+                      <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336L112 336L112 512C112 547.3 140.7 576 176 576L464 576C499.3 576 528 547.3 528 512L528 336L544 336C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384L336 384C362.5 384 384 405.5 384 432L384 528L256 528L256 432C256 405.5 277.5 384 304 384z"
+                      />
+                    </svg>
+                    <a class="internal-link-mobile" href="#home">Home</a>
+                  </span>
+                  <span>
+                    <svg
+                      style="width: 1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 640 640"
+                    >
+                      <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z"
+                      />
+                    </svg>
+                    <a class="internal-link-mobile" href="#project">Project</a>
+                  </span>
+                  <span>
+                    <svg
+                      style="width: 1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 640 640"
+                    >
+                      <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        d="M64 416L64 192C64 139 107 96 160 96L480 96C533 96 576 139 576 192L576 416C576 469 533 512 480 512L360 512C354.8 512 349.8 513.7 345.6 516.8L230.4 603.2C226.2 606.3 221.2 608 216 608C202.7 608 192 597.3 192 584L192 512L160 512C107 512 64 469 64 416z"
+                      />
+                    </svg>
+                    <a class="internal-link-mobile" href="#contact">Contact</a>
+                  </span>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
     </header>
     <main class="background-image">
-        <div class="grid ">
-            <div class="main-container row  ">
-                <section id = "home" class="  home col c-12 l-12">
-                    <h1>PHP INTERN</h1>
-                </section>
-                <section id = "project" class="project col c-12 l-12">
-                    <div class="project-container row">
-                        <div class="col c-12 l-4">
-                            <h1>This is project 1</h1>
-                        </div>
-                        <div class="col c-12 l-4">
-                            <h1>This is project 2</h1>
-                        </div>
-                        <div class="col c-12 l-4">
-                            <h1>This is project 3</h1>
-                        </div>
-
-                    </div>
-                </section>
-                <section id  = "contact" class="contact col c-12 l-12">
-                    <h1>This is contact page</h1>
-                </section>
+      <div class="grid">
+        <div class="main-container row">
+          <section id="home" class="home col c-12 l-12">
+            <div class="short-description">
+              <h1>PHP INTERN</h1>
+              <img
+                src="./assets/avatar_placholder.png"
+                style="width: 7em; height: 7em"
+                alt="avatar"
+              />
+              <div class="description">
+                <p>
+                  Welcome to my portfolio website! I'm thrilled you're here and
+                  excited to take you on a journey through my creative and
+                  professional endeavors. This space is a reflection of my
+                  passion, dedication, and the skills I've cultivated over time
+                  — from hands-on projects to innovative solutions that showcase
+                  my growth and expertise.
+                </p>
+              </div>
+              <a href="#project" class="view-project-button"
+                >View My Projects</a
+              >
             </div>
+          </section>
+          <section id="project" class="project col c-12 l-12">
+            <div class="project-title">Projects</div>
+            <div class="project-container row">
+              <div class="pj-card col c-12 l-4">
+                <div class="pj-name row">
+                  <img
+                    src="./assets/avatar_placholder.png"
+                    style="width: 7em; height: 7em"
+                    alt="pj"
+                  />
+                  <h2>Personal Portfolio Website</h2>
+                </div>
+                <p>
+                  A sleek, responsive website built with HTML, CSS, and
+                  JavaScript to showcase my work, skills, and contact
+                  information. Designed with a modern aesthetic and optimized
+                  for both desktop and mobile viewing.
+                </p>
+              </div>
+              <div class="pj-card col c-12 l-4">
+                <div class="pj-name row">
+                  <img
+                    src="./assets/avatar_placholder.png"
+                    style="width: 7em; height: 7em"
+                    alt="pj"
+                  />
+                  <h2>Task Manager App</h2>
+                </div>
+                <p>
+                  A cross-platform productivity app developed using React
+                  Native. It allows users to create, organize, and track tasks
+                  with features like reminders, priority tagging, and cloud
+                  sync.
+                </p>
+              </div>
+              <div class="pj-card col c-12 l-4">
+                <div class="pj-name row">
+                  <img
+                    src="./assets/avatar_placholder.png"
+                    style="width: 7em; height: 7em"
+                    alt="pj"
+                  />
+                  <h2>AI Chatbot Assistant</h2>
+                </div>
+                <p>
+                  An intelligent chatbot powered by Python and NLP libraries. It
+                  can answer FAQs, provide recommendations, and learn from user
+                  interactions to improve its responses over time.
+                </p>
+              </div>
+              <p style="margin-top: 10px; text-align: center">
+                Throughout my journey, I've worked on a variety of projects that
+                reflect my passion for technology, problem-solving, and
+                user-centered design. From building responsive websites to
+                developing mobile applications and experimenting with AI, each
+                project showcases a unique challenge and a creative solution.
+                These experiences have helped me grow both technically and
+                creatively, and I’m excited to keep pushing boundaries with
+                every new idea.
+              </p>
+            </div>
+          </section>
+          <section id="contact" class="contact col c-12 l-12">
+            <div class="contact-title">Contact</div>
+            <div class="contact-container row">
+              <div class="contact-content col c-12 l-12">
+                <form id="message-form" action="#">
+                  <label for="Name">Name</label>
+                  <input
+                    id="Name"
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                  />
+                  <label id="NameError" style="color: red"></label>
+                  <label for="Email">Email</label>
+                  <input
+                    id="Email"
+                    type="Email"
+                    placeholder="Your Email"
+                    required
+                  />
+                  <label id="EmailError" style="color: red"></label>
+                  <label for="Message">Message</label>
+                  <textarea
+                    id="Message"
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                  <label id="MessageError" style="color: red"></label>
+                  <button type="submit" onclick="submitHandler()">
+                    Send Message
+                  </button>
+                  <label id="alertMessage" style="color: green"></label>
+                </form>
+              </div>
+            </div>
+          </section>
         </div>
+      </div>
     </main>
     <footer>
-        <p>© 2025 Your Name. All rights reserved.</p>
+      <div class="socials row ">
+       <img class="socials-icon"  src="assets\telegram-icon.svg" alt="">
+       <img class="socials-icon" src="assets\discord-icon.svg" alt="">
+       <img class="socials-icon" src="assets\facebook-icon.svg" alt="">
+       <img class="socials-icon" src="assets\instagram-icon.svg" alt="">
+       <img class="socials-icon" src="assets\threads-icon.svg" alt="">
+       <img class="socials-icon" src="assets\tiktok-icon.svg" alt="">
+       <img class="socials-icon" src="assets\x-icon.svg" alt="">
+       <img class="socials-icon" src="assets\youtube-icon.svg" alt="">
+      </div>
+      <p>© 2025 Your Name. All rights reserved.</p>
     </footer>
-        <script src="./js/script.js"></script>
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
