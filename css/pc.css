@@ -18,19 +18,29 @@
     }
     .l-3{
         flex: 0 0 25%;
-            max-width: 25%;
+        max-width: 25%;
     }
     .l-4{
         flex: 0 0 33.3333%;
         max-width: 33.3333%;
     }
-    .l-12{
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
     .l-6{
         flex: 0 0 50%;
         max-width: 50%;
+    }
+
+    .l-o-2{
+        margin-left: 16.6667%;
+    }
+    .l-o-3{
+        margin-left: 25%;
+    }
+    .l-o-4{
+        margin-left: 33.3333%;
+    }
+    
+    .l-o-6{
+        margin-left: 50%;
     }
     .grid{
         max-width: 1200px;
@@ -47,14 +57,15 @@
     header{
         padding: 20px 0;
     }
-    .nav-container {
-        nav{
-            display: flex;
-            justify-content: space-between;
-        }
-        
+    
+    .nav-desktop{
+        display: flex;
+        justify-content: space-between;
     }
     #bars{
+        display: none;
+    }
+    .nav-mobile{
         display: none;
     }
 }

@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');:root{
     --main-color: #F5F5F5;
     --sub-color: #56CCF2 ;
-    --font-color: #333333;
-    --hover-color: #2F80ED;
+    --font-color: #fff;
+    --header-font-color: #333333;
+    --hover-color: #F5F5F5;
 }
 a{
+    font-weight: 600;
     text-decoration: none;
     color: inherit;
 }
@@ -13,28 +15,75 @@ a{
     box-sizing: border-box;
      margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 body{
+    /* background-color: rgba(0,0,0,0.5); */
     font-family: 'Roboto Mono', sans-serif;
     color: var(--font-color);
 }
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
 /* Header */
 header{
+    position: sticky;
+    top: 0;
     padding: 10px 0;
     background-color: var(--sub-color)  ;
+    color: var(--header-font-color);
 }
 .internal-link{
     margin-left: 25px;
-    font-size: 1.2em;
-   font-weight: 600;
+    font-size: 1.2em;  
+    transition: .3s;
 }
-
+.internal-link:hover{
+        color: var(--hover-color);
+    }
+.active{
+    color: var(--hover-color);
+}
 section{
-    min-height: 600px;
+    width: 100%;
+    min-height: 800px;
     background-color:var();
     padding: 60px  0 0 0;
-    
 }
+
+/* Main */
+main{
+    background-image: url("../assets//working.jpg");
+    background-size: cover;
+    background-position:bottom center;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0.3);
+    background-blend-mode: darken;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer{
+    min-height: 200px;
+}
+
  /* Grid system */
   .grid{
     display: block;
@@ -46,4 +95,6 @@ section{
     flex-wrap: wrap;
 }
 
-
+nav{
+    position: relative;
+}
